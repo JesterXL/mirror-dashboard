@@ -10,8 +10,8 @@ export function *getWeather(action):SagaIterator
 {
 	try
 	{
-		const weather = yield call(weatherQuery, action.http);
-		yield put({type: GET_WEATHER_SUCCESS, weather});
+		const weatherData = yield call(weatherQuery, action.http);
+		yield put({type: GET_WEATHER_SUCCESS, weatherData});
 	}
 	catch(error)
 	{

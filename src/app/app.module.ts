@@ -11,6 +11,8 @@ import { rootSaga } from './sagas';
 import createSagaMiddleware from 'redux-saga';
 import { NgReduxModule, NgRedux, DevToolsExtension } from 'ng2-redux';
 
+import {WeatherModule} from './weather/weather.module';
+
 const createLogger = require('redux-logger');
 const sagaMiddleware 	= createSagaMiddleware();
 
@@ -23,7 +25,8 @@ const sagaMiddleware 	= createSagaMiddleware();
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    NgReduxModule
+    NgReduxModule,
+    WeatherModule
   ],
   providers: [DevToolsExtension],
   bootstrap: [AppComponent]

@@ -17,7 +17,7 @@ export function weather(state=defaultWeatherState, action)
 			return Object.assign({}, state, {
 				loading: false,
 				error: undefined,
-				weather: action.weather
+				weatherData: action.weatherData
 			});
 
 		case GET_WEATHER_ERROR:

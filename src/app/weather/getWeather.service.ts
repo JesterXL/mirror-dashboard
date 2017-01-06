@@ -5,7 +5,7 @@ export const getWeatherService = (http)=>
 {
     return new Promise((success, failure)=>
 	{
-		http.get('http://api.openweathermap.org/data/2.5/weather?q=Mechanicsville,va&units=imperial&APPID=${APPID}')
+		http.get(`http://api.openweathermap.org/data/2.5/weather?q=Mechanicsville,va&units=imperial&APPID=${APPID}`)
 		.toPromise()
 		.then((response:Response)=>
 		{
