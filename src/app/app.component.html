@@ -1,8 +1,26 @@
-<h1>
-  {{title}}
+<style>
+.basicRow {
+  display: flex;
+  flex-direction: row;
+}
 
-  <button md-raised-button>RAISED</button>
-  <jxl-weather></jxl-weather>
-  <jxl-timenow></jxl-timenow>
+.basicColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer2 {
+  flex-grow: 2;
+}
+
+</style>
+
+<div class="basicColumn">
+  <div class="basicRow">
+    <jxl-weather></jxl-weather>
+    <div class="spacer2">&nbsp;</div>
+    <jxl-timenow></jxl-timenow>
+  </div>
+  <div class="spacer2">&nbsp;</div>
   <jxl-news></jxl-news>
-</h1>
+</div>

@@ -1,11 +1,23 @@
 <style>
 .cardWidth {
-    max-width: 200px;
+    max-width: 160px;
 }
+
+.basicRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottomNewsRow {
+  align-items: flex-end;
+}
+
 </style>
 
-<md-card *ngFor="let story of news | async" class="cardWidth">
-    <img md-card-image [src]="story.urlToImage">
-    <md-card-title>{{story.title}}</md-card-title>
-    <md-card-content>{{story.description}}</md-card-content>
-</md-card>
+<div class="basicRow bottomNewsRow">
+    <md-card *ngFor="let story of news | async" class="cardWidth">
+        <img md-card-image [src]="story.urlToImage">
+        <md-card-title>{{story.title}}</md-card-title>
+        <!--<md-card-content>{{story.description}}</md-card-content>-->
+    </md-card>
+</div>
