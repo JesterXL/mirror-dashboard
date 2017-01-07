@@ -4,13 +4,13 @@ import { select } from 'ng2-redux';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-	selector: 'jxl-weather',
-	templateUrl: './weather.component.html'
+	selector: 'jxl-news',
+	templateUrl: './news.component.html'
 })
 
 @Injectable()
-export class WeatherComponent
+export class NewsComponent
 {
-	@select(['weather', 'main', 'temp']) tempature:Observable<any>;
+	@select(['news', 'articles']) news:Observable<any>;
 }
 

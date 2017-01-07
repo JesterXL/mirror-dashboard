@@ -5,13 +5,15 @@ import { HttpModule } from '@angular/http';
 import { Http, Response } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
-import rootReducer from './reducers';
+import { rootReducer } from './reducers';
 import { IAppState }  from './IAppState';
 import { rootSaga } from './sagas';
 import createSagaMiddleware from 'redux-saga';
 import { NgReduxModule, NgRedux, DevToolsExtension } from 'ng2-redux';
 
 import {WeatherModule} from './weather/weather.module';
+import {TimeNowModule} from './timenow/timenow.module';
+import {NewsModule} from './news/news.module';
 
 const createLogger = require('redux-logger');
 const sagaMiddleware 	= createSagaMiddleware();
@@ -26,7 +28,9 @@ const sagaMiddleware 	= createSagaMiddleware();
     HttpModule,
     MaterialModule.forRoot(),
     NgReduxModule,
-    WeatherModule
+    WeatherModule,
+    TimeNowModule,
+    NewsModule
   ],
   providers: [DevToolsExtension],
   bootstrap: [AppComponent]
@@ -43,7 +47,7 @@ export class AppModule {
     setTimeout(()=>
     {
       console.log("Manual dispatch");
-      ngRedux.dispatch({type: 'GET_WEATHER', http});
+      ngRedux.dispatch({type: 'GET_DATA', http});
    }, 3 * 1000);
   }
 }

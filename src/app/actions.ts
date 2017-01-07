@@ -1,3 +1,3 @@
-export const GET_WEATHER         = 'GET_WEATHER';
-export const GET_WEATHER_SUCCESS = 'GET_WEATHER_SUCCESS';
-export const GET_WEATHER_ERROR = 'GET_WEATHER_ERROR';
+export const GET_DATA         = 'GET_DATA';
+export const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS';
+export const GET_DATA_ERROR   = 'GET_DATA_ERROR';

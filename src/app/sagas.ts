@@ -1,8 +1,8 @@
-import { watchWeather } from './weather/weather.saga';
+import { watchGetData } from './getData.saga'
 
 export function *rootSaga()
 {
 	yield [
-		watchWeather()
+		watchGetData()
 	];
 }
