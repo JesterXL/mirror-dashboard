@@ -18,7 +18,6 @@ export function *getDataSaga(action):SagaIterator
 		yield put({type: GET_DATA_ERROR, error});
 	}
 }
-
 export function query(http:Http)
 {
 	return getDataService(http);

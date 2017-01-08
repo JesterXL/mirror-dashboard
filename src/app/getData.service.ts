@@ -5,7 +5,9 @@ export const getDataService = (http)=>
 {
     return new Promise((success, failure)=>
 	{
-		http.get('http://localhost:8080/api/proxy')
+		const url1 = 'http://localhost:8080/api/proxy';
+		const url2 = 'https://j56ld3za2f.execute-api.us-east-1.amazonaws.com/prod/loadDataForMirrorDashboard';
+		http.get(url2)
 		.toPromise()
 		.then((response:Response)=>
 		{

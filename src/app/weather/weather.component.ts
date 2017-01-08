@@ -12,5 +12,6 @@ import { Observable } from 'rxjs/Observable';
 export class WeatherComponent
 {
 	@select(['weather', 'main', 'temp']) tempature:Observable<any>;
+	@select(['weather', 'weatherIconURL']) weatherIconURL:Observable<any>;
 }
 

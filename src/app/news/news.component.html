@@ -10,6 +10,8 @@
 
 .bottomNewsRow {
   align-items: flex-end;
+  position: fixed;
+  bottom: 0;
 }
 
 </style>
@@ -17,7 +19,8 @@
 <div class="basicRow bottomNewsRow">
     <md-card *ngFor="let story of news | async" class="cardWidth">
         <img md-card-image [src]="story.urlToImage">
-        <md-card-title>{{story.title}}</md-card-title>
+        <!--<md-card-title>{{story.title}}</md-card-title>-->
+        <md-card-content>{{story.title}}</md-card-content>
         <!--<md-card-content>{{story.description}}</md-card-content>-->
     </md-card>
 </div>
