@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { IAppState }  from './IAppState';
+import { Http } from '@angular/http';
+import { NgRedux } from 'ng2-redux';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  constructor(private ngRedux: NgRedux<IAppState>, private http:Http)
+  {
+
+  }
+
+  refresh()
+  {
+    this.ngRedux.dispatch({type: 'GET_DATA', http: this.http});
+  }
 }

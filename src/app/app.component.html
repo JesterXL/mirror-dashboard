@@ -13,6 +13,10 @@
   flex-grow: 2;
 }
 
+.refreshButton {
+  align-items: flex-end;
+}
+
 </style>
 
 <div class="basicColumn">
@@ -22,5 +26,8 @@
     <jxl-weather></jxl-weather>
   </div>
   <div class="spacer2">&nbsp;</div>
+  <div class="refreshButton">
+      <button md-button (click)="refresh()">Test</button>
+  </div>
   <jxl-news></jxl-news>
 </div>
